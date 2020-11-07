@@ -26,6 +26,16 @@ public class Book extends Product {
         this.author = author;
     }
 
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        }
+        if (getAuthor() == search) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return "Book{" +

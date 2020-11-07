@@ -39,6 +39,14 @@ public class Product {
         this.price = price;
     }
 
+
+    public boolean matches(String search) {
+        if (getName() == search) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
